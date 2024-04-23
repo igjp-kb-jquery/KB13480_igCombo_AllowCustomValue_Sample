@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <!-- Ignite UI Required Combined CSS Files -->
+    <link href="http://cdn-na.infragistics.com/igniteui/2023.1/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
+    <link href="http://cdn-na.infragistics.com/igniteui/2023.1/latest/css/structure/infragistics.css" rel="stylesheet" />
+
+    <script src="http://modernizr.com/downloads/modernizr-latest.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+    <!-- Ignite UI Required Combined JavaScript Files -->
+    <script src="http://cdn-na.infragistics.com/igniteui/2023.1/latest/js/infragistics.core.js"></script>
+    <script src="http://cdn-na.infragistics.com/igniteui/2023.1/latest/js/infragistics.lob.js"></script>
+</head>
+<body>
+    <div>
+        <input id="igCombo1" />
+        <input type="text" value="フォーカスアウト用"/>
+    </div>
+
+    <script>
+        const products = [
+            { "ProductID": 1, "ProductName": "Chai" },
+            { "ProductID": 2, "ProductName": "Chang" },
+            { "ProductID": 3, "ProductName": "Aniseed Syrup"},
+            { "ProductID": 4, "ProductName": "Chef Anton\u0027s Cajun Seasoning" },
+            { "ProductID": 5, "ProductName": "Chef Anton\u0027s Gumbo Mix" },
+            { "ProductID": 6, "ProductName": "Grandma\u0027s Boysenberry Spread" },
+            { "ProductID": 7, "ProductName": "Uncle Bob\u0027s Organic Dried Pears" },
+            { "ProductID": 8, "ProductName": "Northwoods Cranberry Sauce" },
+            { "ProductID": 9, "ProductName": "Mishi Kobe Niku" },
+            { "ProductID": 10, "ProductName": "Ikura" },
+            { "ProductID": 11, "ProductName": "Queso Cabrales", "CategoryName": "Dairy Products" },
+            { "ProductID": 12, "ProductName": "Queso Manchego La Pastora" },
+            { "ProductID": 13, "ProductName": "Konbu" },
+            { "ProductID": 14, "ProductName": "Tofu" },
+            { "ProductID": 15, "ProductName": "Genen Shouyu" }, 
+            { "ProductID": 16, "ProductName": "Pavlova" },
+            { "ProductID": 17, "ProductName": "Alice Mutton" },
+            { "ProductID": 18, "ProductName": "Carnarvon Tigers" },
+            { "ProductID": 19, "ProductName": "Teatime Chocolate Biscuits" },
+            { "ProductID": 20, "ProductName": "Sir Rodney\u0027s Marmalade" },
+            { "ProductID": 21, "ProductName": "Sir Rodney\u0027s Scones" },
+            { "ProductID": 22, "ProductName": "Gustaf\u0027s Knäckebröd" },
+            { "ProductID": 23, "ProductName": "Tunnbröd" },
+            { "ProductID": 24, "ProductName": "Guaraná Fantástica" },
+            { "ProductID": 25, "ProductName": "NuNuCa Nuß-Nougat-Creme" },
+            { "ProductID": 26, "ProductName": "Gumbär Gummibärchen" },
+            { "ProductID": 27, "ProductName": "Schoggi Schokolade" },
+            { "ProductID": 28, "ProductName": "Rössle Sauerkraut" },
+            { "ProductID": 29, "ProductName": "Thüringer Rostbratwurst" },
+            { "ProductID": 30, "ProductName": "Nord-Ost Matjeshering" }
+        ];
+
+        $(function () {
+
+            $("#igCombo1").igCombo({
+                width: "270px",
+                textKey: "ProductName",
+                valueKey: "ProductID",
+                dataSource: products,
+                allowCustomValue: true,
+                autoSelectFirstMatch: false,
+            });
+        });
+    </script>
+</body>
+</html>
